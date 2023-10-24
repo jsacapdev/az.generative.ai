@@ -38,7 +38,9 @@ And activate it:
 It can be remove later using the following:
 
 `conda env remove --name azopenai`
- 
+
 Occasionally a GUI for Anaconda is useful and can [installed](https://docs.anaconda.com/free/navigator/install/) and run using the following:
 
 `anaconda-navigator`
+
+When running the python sample, remember to set the interpreter to the environment created above.
