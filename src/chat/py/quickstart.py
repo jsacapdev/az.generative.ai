@@ -10,11 +10,19 @@ response = openai.ChatCompletion.create(
     engine="chat", # engine = "deployment_name".
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Does Azure OpenAI support customer managed keys?"},
-        {"role": "assistant", "content": "Yes, customer managed keys are supported by Azure OpenAI."},
-        {"role": "user", "content": "Do other Azure AI services support this too?"}
-    ]
-)
+        # {"role": "user", "content": "Does Azure OpenAI support customer managed keys?"},
+        # {"role": "assistant", "content": "Yes, customer managed keys are supported by Azure OpenAI."},
+        # {"role": "user", "content": "Do other Azure AI services support this too?"},
+        {"role": "user", "content": "Are Arsenal a football club?"},
+        {"role": "assistant", "content": "Yes, Arsenal FC are a soccer club that play in the Premier League."},
+        {"role": "user", "content": "How many times have Arsenal won the F.A. Cup?"},
+    ],
+    temperature=0.7,
+    max_tokens=800,
+    top_p=0.95,
+    frequency_penalty=0,
+    presence_penalty=0,
+    stop=None)
 
 print(response)
 print(response['choices'][0]['message']['content'])

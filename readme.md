@@ -50,3 +50,10 @@ Install the dependencies for the sample:
 ``` bash
 pip install openai
 ```
+
+The credentials to communicate with the chat service can be stored as envioronment varianles using the following commands:
+
+``` bash
+export AZURE_OPENAI_KEY="???"
+export AZURE_OPENAI_ENDPOINT="https://???.openai.azure.com/"
+```
