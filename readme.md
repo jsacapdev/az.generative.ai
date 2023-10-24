@@ -6,7 +6,7 @@ Creates a series of resources in Azure to support as a playground, including sev
 
 ## Deployment
 
-Using the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/), run the following commands to create a resource group:
+No CI/CD at this stage, but uses infrastructure as code to deploy the resources needed. Using the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/), run the following commands to create a resource group:
 
 `az group create -n rg-genai-dev-001 -l uksouth --tags "productOwner=me@dat.com" "application=Generative AI" "environment=dev" "projectCode=n/a" --debug`
 
