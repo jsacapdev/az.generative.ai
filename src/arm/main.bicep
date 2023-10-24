@@ -30,7 +30,7 @@ param embeddingDeploymentCapacity int = 30
 var product = 'genai'
 
 param tags object = {
-  productOwner: 'jas.atwal@capgemini.com'
+  productOwner: 'me@dat.com'
   application: 'Generative AI'
   environment: 'dev'
   projectCode: 'n/a'
