@@ -39,7 +39,7 @@ It can be remove later using the following:
 
 `conda env remove --name azopenai`
 
-Occasionally a GUI for Anaconda is useful and can [installed](https://docs.anaconda.com/free/navigator/install/) and run using the following:
+Occasionally a GUI for Anaconda is useful (checking packages in a GUI, etc.) and can [installed](https://docs.anaconda.com/free/navigator/install/) and run using the following:
 
 `anaconda-navigator`
 
