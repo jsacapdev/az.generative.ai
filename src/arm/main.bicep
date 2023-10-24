@@ -9,7 +9,7 @@ param environment string = 'dev'
 param location string = 'westeurope'
 
 @description('The subnet octet range.')
-param octet int
+param octet int = 0
 
 //////////////////////
 // Open AI 
@@ -67,7 +67,7 @@ module cognative './modules/cognative.bicep' = {
     }
     deployments: [
       {
-        name: 'chat'
+        name: chatGptModelName
         model: {
           format: 'OpenAI'
           name: chatGptModelName
@@ -79,7 +79,7 @@ module cognative './modules/cognative.bicep' = {
         }
       }
       {
-        name: 'embedding'
+        name: embeddingModelName
         model: {
           format: 'OpenAI'
           name: embeddingModelName

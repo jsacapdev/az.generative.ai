@@ -17,7 +17,6 @@ az deployment group create -f ./main.bicep \
 -g rg-genai-dev-001 \
 --parameters environment=dev \
 location=uksouth \
-octet=0 \
 --debug
 ```
 
