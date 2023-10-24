@@ -12,8 +12,8 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             "env": {
-                "AZURE_OPENAI_KEY": "Development",
-                "AZURE_OPENAI_ENDPOINT": "Development",
+                "AZURE_OPENAI_KEY": "???",
+                "AZURE_OPENAI_ENDPOINT": "???",
             }
         }
     ]
