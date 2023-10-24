@@ -8,7 +8,7 @@
             "name": "pythong quickstart",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/src/chat/py/quickstart.py",
+            "program": "${workspaceFolder}/quickstart.py",
             "console": "integratedTerminal",
             "justMyCode": true,
             "env": {
