@@ -10,7 +10,11 @@
             "request": "launch",
             "program": "${workspaceFolder}/src/chat/py/quickstart.py",
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": true,
+            "env": {
+                "AZURE_OPENAI_KEY": "Development",
+                "AZURE_OPENAI_ENDPOINT": "Development",
+            }
         }
     ]
 }

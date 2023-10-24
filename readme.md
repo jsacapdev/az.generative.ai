@@ -44,3 +44,9 @@ Occasionally a GUI for Anaconda is useful (checking packages in a GUI, etc.) and
 `anaconda-navigator`
 
 When running the python sample, remember to set the interpreter to the environment created above.
+
+Install the dependencies for the sample:
+
+``` bash
+pip install openai
+```
