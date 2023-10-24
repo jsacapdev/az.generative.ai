@@ -21,12 +21,24 @@ octet=0 \
 --debug
 ```
 
-Start Anaconda.
+## Application Code
 
-`anaconda-navigator`
+The code samples are developed in [Python](https://www.python.org/).
+
+[Anaconda](https://www.anaconda.com/) has been used to create the virtual environments.
+
+Once installed, create an environment:
 
 `conda create --name azopenai python=3.7.1`
 
+And activate it:
+
 `conda activate azopenai`
 
+It can be remove later using the following:
+
 `conda env remove --name azopenai`
+ 
+Occasionally a GUI for Anaconda is useful and can [installed](https://docs.anaconda.com/free/navigator/install/) and run using the following:
+
+`anaconda-navigator`
