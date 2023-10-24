@@ -2,7 +2,7 @@
 
 Playground for using advanced language models using [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service).
 
-Creates a series of resources in Azure to support as a playground, including several language models.
+Creates a series of resources in Azure to support as a playground, including several language [models](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview).
 
 ## Deployment
 
