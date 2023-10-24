@@ -16,6 +16,7 @@ response = openai.ChatCompletion.create(
         {"role": "user", "content": "Are Arsenal a football club?"},
         {"role": "assistant", "content": "Yes, Arsenal FC are a soccer club that play in the Premier League."},
         {"role": "user", "content": "How many times have Arsenal won the F.A. Cup?"},
+        # {"role": "user", "content": "Are Arsenal likely to win the Premier League this year?"},
     ],
     temperature=0.7,
     max_tokens=800,
