@@ -5,10 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "pythong quickstart",
+            "name": "py quickstart",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/src/chat/py/quickstart.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+            }
+        },
+        {
+            "name": "py loop",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/chat/py/loop.py",
             "console": "integratedTerminal",
             "justMyCode": true,
             "env": {

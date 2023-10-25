@@ -28,7 +28,7 @@ The code samples are developed in [Python](https://www.python.org/).
 
 Once installed, create an environment:
 
-`conda create --name azopenai python=3.7.1`
+`conda create --name azopenai python=3.11`
 
 And activate it:
 
@@ -47,7 +47,8 @@ When running the python sample, remember to set the interpreter to the environme
 Install the dependencies for the sample:
 
 ``` bash
-pip install openai
+conda install openai
+pip install tiktoken
 ```
 
 The credentials to communicate with the chat service can be stored as envioronment varianles using the following commands:
