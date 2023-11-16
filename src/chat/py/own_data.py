@@ -53,4 +53,7 @@ completion = openai.ChatCompletion.create(
         }
     ]
 )
+
 print(completion)
+
+print("!!!")
