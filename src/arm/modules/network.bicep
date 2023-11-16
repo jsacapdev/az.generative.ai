@@ -4,6 +4,9 @@ param vnetName string
 @description('Name')
 param openAiServiceSubnetName string
 
+@description('Name')
+param storageSubnetName string
+
 @description('The location.')
 param location string
 
@@ -31,6 +34,17 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2023-05-01' = {
           serviceEndpoints: [
             {
               service: 'Microsoft.CognitiveServices'
+            }
+          ]
+        }
+      }
+      {
+        name: storageSubnetName
+        properties: {
+          addressPrefix: '10.2.${octet + 1}.0/24'
+          serviceEndpoints: [
+            {
+              service: 'Microsoft.Storage'
             }
           ]
         }

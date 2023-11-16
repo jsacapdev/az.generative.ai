@@ -32,7 +32,7 @@ resource account 'Microsoft.CognitiveServices/accounts@2023-05-01' = {
     customSubDomainName: toLower(cognitiveServicesName)
     publicNetworkAccess: publicNetworkAccess
     networkAcls: {
-      defaultAction: 'Deny'
+      defaultAction: 'Allow'
       ipRules: [
         {
           value: '20.68.23.237'

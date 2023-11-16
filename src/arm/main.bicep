@@ -39,9 +39,12 @@ param tags object = {
 // network
 var vnetName = 'vnet-${product}-${environment}-001'
 var openAiServiceSubnetName = 'snet-${product}-${environment}-001'
+var storageSubnetName = 'snet-${product}-${environment}-002'
 
 // open ai
 var cognitiveServicesName = 'openai-${product}-${environment}-001'
+var searchServiceName = 'gptkb-${product}-${environment}-001'
+var storageAccountName = 'st${product}${environment}002'
 
 module network './modules/network.bicep' = {
   name: 'network'
@@ -50,7 +53,34 @@ module network './modules/network.bicep' = {
     vnetName: vnetName
     tags: tags
     openAiServiceSubnetName: openAiServiceSubnetName
+    storageSubnetName: storageSubnetName
     octet: octet
+  }
+}
+
+module storage './modules/storage.bicep' = {
+  name: 'storage'
+  params: {
+    name: storageAccountName
+    location: location
+    tags: tags
+    vnetName: vnetName
+    storageSubnetName: storageSubnetName
+    allowBlobPublicAccess: false
+    publicNetworkAccess: 'Enabled'
+    sku: {
+      name: 'Standard_LRS'
+    }
+    deleteRetentionPolicy: {
+      enabled: true
+      days: 2
+    }
+    containers: [
+      {
+        name: 'content'
+        publicAccess: 'None'
+      }
+    ]
   }
 }
 
@@ -88,5 +118,23 @@ module cognative './modules/cognative.bicep' = {
         capacity: embeddingDeploymentCapacity
       }
     ]
+  }
+}
+
+module searchService './modules/search.bicep' = {
+  name: 'search-service'
+  params: {
+    name: searchServiceName
+    location: location
+    tags: tags
+    authOptions: {
+      aadOrApiKey: {
+        aadAuthFailureMode: 'http401WithBearerChallenge'
+      }
+    }
+    sku: {
+      name: 'standard'
+    }
+    semanticSearch: 'free'
   }
 }

@@ -23,6 +23,16 @@
             "justMyCode": true,
             "env": {
             }
+        },
+        {
+            "name": "py own_data",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/chat/py/own_data.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+            }
         }
     ]
 }
