@@ -17,7 +17,7 @@ param octet int = 0
 
 param openAiSkuName string = 'S0'
 param chatGptModelName string = 'gpt-35-turbo'
-param chatGptModelVersion string = '0613'
+param chatGptModelVersion string = '0301'
 param embeddingModelName string = 'text-embedding-ada-002'
 param chatGptDeploymentCapacity int = 30
 param embeddingDeploymentCapacity int = 30

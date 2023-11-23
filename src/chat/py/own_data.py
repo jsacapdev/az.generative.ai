@@ -51,7 +51,7 @@ aoai_deployment_id = os.environ.get("AZURE_OPENAI_DEPLOYMENT_ID")
 setup_byod(aoai_deployment_id)
 
 completion = openai.ChatCompletion.create(
-    messages=[{"role": "user", "content": "What are the differences between Azure Machine Learning and Azure AI services?"}],
+    messages=[{"role": "user", "content": "Can you tell me about invoice 100?"}],
     deployment_id=os.environ.get("AZURE_OPENAI_DEPLOYMENT_ID"),
     dataSources=[  # camelCase is intentional, as this is the format the API expects
         {

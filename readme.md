@@ -57,3 +57,27 @@ The credentials to communicate with the chat service can be stored as envioronme
 export AZURE_OPENAI_KEY="???"
 export AZURE_OPENAI_ENDPOINT="https://???.openai.azure.com/"
 ```
+
+## [Using Own Data](https://learn.microsoft.com/en-us/azure/ai-services/openai/use-your-data-quickstart?tabs=bash%2Cpython&pivots=programming-language-python)
+
+There is an [example](https://github.com/jsacapdev/az.generative.ai/blob/main/src/chat/py/own_data.py) of using natural language against that has been uploaded. To use, set the following envioronment variables:
+
+``` pwsh
+$env:AZURE_OPENAI_ENDPOINT="https://openai-genai-dev-001.openai.azure.com/"; 
+$env:AZURE_OPENAI_KEY="THE_KEY"; 
+$env:AZURE_OPENAI_DEPLOYMENT_ID="gpt-35-turbo"; 
+$env:SEARCH_ENDPOINT="https://gptkb-genai-dev-001.search.windows.net/"; 
+$env:SEARCH_KEY="THE_KEY"; 
+$env:SEARCH_INDEX_NAME="index";
+```
+
+A bit of trial and error found that the following packages worked:
+
+```pwsh
+pip install openai==0.28.1
+pip install python-dotenv
+```
+
+And the `gpt-35-turbo` model and `0301` version.
+
+The data itself was uploaded manually in the portal, and the question in the script shows how we can tailor our ask to our data.
