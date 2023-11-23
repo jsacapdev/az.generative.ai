@@ -80,4 +80,4 @@ pip install python-dotenv
 
 And the `gpt-35-turbo` model and `0301` version.
 
-The data itself was uploaded manually in the portal, and the question in the script shows how we can tailor our ask to our data.
+The data itself was [uploaded manually in the portal](https://github.com/Azure-Samples/azure-search-openai-demo/blob/main/scripts/prepdocs.py), and the question in the script [shows](https://github.com/jsacapdev/az.generative.ai/blob/fabf75346cbb354ce5d2bda1802ce459891459fb/src/chat/py/own_data.py#L54C82-L54C82) how we can tailor our ask to our data.
